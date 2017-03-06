@@ -4,11 +4,14 @@
   "description": "a new tweet app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "arinchoi&cigdem",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.2"
+    "chalk": "^1.1.3",
+    "express": "^4.15.2",
+    "volleyball": "^1.4.1"
   }
 }
