@@ -3,6 +3,8 @@ const chalk = require('chalk');
 const app = express(); // creates an instance of an express application
 const volleyball = require('volleyball'); //does volleyball need express to run before?
 const nunjucks = require('nunjucks');
+const routes = require('./routes');
+app.use('/', routes);
 
 var locals = {
     title: 'An Example',
@@ -33,16 +35,16 @@ app.use('/special/', function(req, res, next) {
   next();
 })
 
-app.get('/', function(req, res) {
-//res.send("Welcome home!")
-  const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
-  res.render( 'index', {title: 'Hall of Fame', people: people} );
-})
-// {title: 'Hall of Fame', people: people}
+// app.get('/', function(req, res) {
+// //res.send("Welcome home!")
+//   const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
+//   res.render( 'index', {title: 'Hall of Fame', people: people} );
+// })
 
-app.get('/news', function(req, res) {
-  res.send("Welcome to ABC NEWS!")
-})
+
+// app.get('/news', function(req, res) {
+//   res.send("Welcome to ABC NEWS!")
+// })
 
 
 
